@@ -1,8 +1,13 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ObsTitleAnimExit : StateMachineBehaviour
+public class SceneChanger : StateMachineBehaviour
 {
+
+    public string SceneName{ get; set; }
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -18,8 +23,7 @@ public class ObsTitleAnimExit : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if( PlayerPrefs.GetInt( "Tutorial" ) == 1 ) SceneManager.LoadScene( "SelectStageScene" );
-        else SceneManager.LoadScene( "SelectPlayTutorial" );
+        SceneManager.LoadScene( SceneName );    
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -49,7 +49,7 @@ AnimatorStateTransition:
   m_CanTransitionToSelf: 1
 --- !u!1107 &-75626805884798825
 AnimatorStateMachine:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -86,7 +86,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -102,7 +102,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
 --- !u!1102 &5281104821779869546
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,7 +129,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &5904116477956950244
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -167,4 +167,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323a041e1eabcb84882b93be62245a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: SelectStageScene
