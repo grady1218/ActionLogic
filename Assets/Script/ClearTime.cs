@@ -1,25 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Net.Mime;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ClearTime : MonoBehaviour
 {
-    public float time;
-    public bool IsClear = false;
-    Text TimeText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        time = 0.0f;
-        TimeText = GetComponent<Text>();
-    }
+	public float Time;
+	public bool IsClear = false;
+	private Text _timeText;
+	// Start is called before the first frame update
+	void Start()
+	{
+		Time = 0.0f;
+		_timeText = GetComponent<Text>();
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!IsClear)
-        {
-            time += Time.deltaTime;
-        }
-        TimeText.GetComponent<Text>().text = $"新 {time.ToString("f2")}秒";
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		if (!IsClear)
+		{
+			Time += UnityEngine.Time.deltaTime;
+		}
+		_timeText.GetComponent<Text>().text = $"新 {Time.ToString("f2")}秒";
+	}
 }
